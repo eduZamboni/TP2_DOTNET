@@ -8,9 +8,9 @@
 
 <form method="post">
     <div class="mb-3">
-        <label asp-for="CityName" class="form-label"></label>
-        <input asp-for="CityName" class="form-control" />
-        <span asp-validation-for="CityName" class="text-danger"></span>
+        <label asp-for="Input.CityName" class="form-label"></label>
+        <input asp-for="Input.CityName" class="form-control" />
+        <span asp-validation-for="Input.CityName" class="text-danger"></span>
     </div>
 
     <button type="submit" class="btn btn-primary">Enviar</button>
@@ -19,7 +19,7 @@
 @if (Model.Submitted)
 {
     <div class="alert alert-success mt-3">
-        Nome da cidade cadastrado: <strong>@Model.CityName</strong>
+        Nome da cidade cadastrado: <strong>@Model.Input.CityName</strong>
     </div>
 }
 

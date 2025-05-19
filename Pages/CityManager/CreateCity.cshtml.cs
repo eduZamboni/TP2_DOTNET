@@ -6,24 +6,29 @@ namespace TP2.Pages.CityManager
 {
     public class CreateCityModel : PageModel
     {
-        public string? CityName { get; private set; }
+        public class InputModel
+        {
+            [BindProperty]
+            [Required(ErrorMessage = "O nome da cidade é obrigatório.")]
+            [MinLength(3, ErrorMessage = "O nome da cidade deve ter ao menos 3 caracteres.")]
+            public string CityName { get; set; } = string.Empty;
+        }
+        [BindProperty]
+        public InputModel Input { get; set; }
         public bool Submitted { get; private set; }
-
         public void OnGet()
         {
+            Input = new InputModel();
         }
 
-        public IActionResult OnPost(string cityName)
+        public IActionResult OnPost()
         {
-            if (string.IsNullOrWhiteSpace(cityName))
+            if (!ModelState.IsValid)
             {
-                ModelState.AddModelError(nameof(cityName), "O nome da cidade é obrigatório.");
                 return Page();
             }
-
-            CityName = cityName;
+            
             Submitted = true;
-
             return Page();
         }
     }
