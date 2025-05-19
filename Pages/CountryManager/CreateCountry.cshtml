@@ -1,0 +1,42 @@
+@page
+@model TP2.Pages.CountryManager.CreateCountryModel
+@{
+    ViewData["Title"] = "Cadastrar País";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post" id="countryForm">
+    <div class="mb-3">
+        <label asp-for="Input.CountryName" class="form-label"></label>
+        <input asp-for="Input.CountryName" class="form-control" />
+        <span asp-validation-for="Input.CountryName" class="text-danger"></span>
+    </div>
+    
+    <div class="mb-3">
+        <label asp-for="Input.CountryCode" class="form-label"></label>
+        <input asp-for="Input.CountryCode" class="form-control"/>
+        <span asp-validation-for="Input.CountryCode" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+
+@if (Model.Submitted)
+{
+    <div class="alert alert-success mt-3">
+        País cadastrado: <strong>@Model.CreatedCountry.CountryName (@Model.CreatedCountry.CountryCode)</strong>
+    </div>
+}
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        $(document).ready(function() {
+            // Ativa validação em tempo real
+            $("#Input_CountryName, #Input_CountryCode").on("input", function() {
+                $(this).valid();
+            });
+        });
+    </script>
+}
