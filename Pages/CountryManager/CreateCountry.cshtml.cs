@@ -31,6 +31,31 @@ namespace TP2.Pages.CountryManager
                 return Page();
             }
 
+            bool hasCustomValidationError = false;
+            for (int i = 0; i < Inputs.Count; i++)
+            {
+                var input = Inputs[i];
+
+                // Só valida se ambos os campos foram preenchidos
+                if (!string.IsNullOrWhiteSpace(input.CountryName) && !string.IsNullOrWhiteSpace(input.CountryCode))
+                {
+                    char firstLetterName = char.ToUpper(input.CountryName[0]);
+                    char firstLetterCode = char.ToUpper(input.CountryCode[0]);
+
+                    if (firstLetterName != firstLetterCode)
+                    {
+                        ModelState.AddModelError($"Inputs[{i}].CountryCode",
+                            $"O código deve começar com a mesma letra que o nome ({firstLetterName})");
+                        hasCustomValidationError = true;
+                    }
+                }
+            }
+
+            if (hasCustomValidationError)
+            {
+                return Page();
+            }
+
             // Criar instância de Country a partir do InputModel
             CreatedCountries = new List<Country>();
             foreach (
@@ -45,8 +70,9 @@ namespace TP2.Pages.CountryManager
                     CountryName = input.CountryName,
                     CountryCode = input.CountryCode
                 });
-            };
-            
+            }
+            ;
+
             Submitted = true;
             return Page();
         }
@@ -57,7 +83,7 @@ namespace TP2.Pages.CountryManager
             [MinLength(3, ErrorMessage = "O nome do país deve ter ao menos 3 caracteres.")]
             [Display(Name = "Nome do País")]
             public string CountryName { get; set; } = string.Empty;
-            
+
             [Required(ErrorMessage = "O código do país é obrigatório.")]
             [StringLength(2, MinimumLength = 2, ErrorMessage = "O código do país deve ter exatamente 2 caracteres.")]
             [Display(Name = "Código do País (ISO)")]

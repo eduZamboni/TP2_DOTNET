@@ -98,3 +98,4 @@
 /Users/p/Desktop/TP2_C#/TP2/obj/Debug/net9.0/TP2.sourcelink.json
 /Users/p/Desktop/TP2_C#/TP2/obj/Debug/net9.0/compressed/nl1qyox5dw-bigpatz117.gz
 /Users/p/Desktop/TP2_C#/TP2/obj/Debug/net9.0/compressed/u80gox69re-tb10iju0na.gz
+/Users/p/Desktop/TP2_C#/TP2/obj/Debug/net9.0/compressed/8yrttk75hr-fpkdsc1i5v.gz

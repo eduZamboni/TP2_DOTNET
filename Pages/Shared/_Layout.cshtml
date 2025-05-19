@@ -20,12 +20,41 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                        <!-- Gerenciamento de Cidades -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="cityDropdown" role="button" 
+                               data-bs-toggle="dropdown" aria-expanded="false">
+                                Cidades
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="cityDropdown">
+                                <li><a class="dropdown-item" asp-page="/CityManager/CreateCity">Cadastrar Cidade</a></li>
+                                <li><a class="dropdown-item" asp-page="/CityManager/CityList">Lista de Cidades</a></li>
+                            </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/CityManager/CreateCity">Cadastrar Cidade</a>
+                        
+                        <!-- Gerenciamento de Países -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="countryDropdown" role="button" 
+                               data-bs-toggle="dropdown" aria-expanded="false">
+                                Países
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="countryDropdown">
+                                <li><a class="dropdown-item" asp-page="/CountryManager/CreateCountry">Cadastrar Países</a></li>
+                            </ul>
                         </li>
+                        
+                        <!-- Gerenciamento de Notas -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="noteDropdown" role="button" 
+                               data-bs-toggle="dropdown" aria-expanded="false">
+                                Notas
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="noteDropdown">
+                                <li><a class="dropdown-item" asp-page="/NoteManager/SaveNote">Criar Nota</a></li>
+                                <li><a class="dropdown-item" asp-page="/NoteManager/ViewNotes">Visualizar Notas</a></li>
+                            </ul>
+                        </li>
+
                     </ul>
                 </div>
             </div>
