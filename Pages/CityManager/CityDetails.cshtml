@@ -1,0 +1,15 @@
+@page "{cityName}"
+@model TP2.Pages.CityManager.CityDetailsModel
+@{
+    ViewData["Title"] = $"Detalhes de {Model.CityName}";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="alert alert-info">
+    <p>Você está vendo detalhes de: <strong>@Model.CityName</strong></p>
+</div>
+
+<div class="mt-3">
+    <a asp-page="/Index" class="btn btn-secondary">Voltar</a>
+</div>
