@@ -1,0 +1,71 @@
+@page
+@model TP2.Pages.NoteManager.ViewNotesModel
+@{
+    ViewData["Title"] = "Visualizar Notas";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <h5>Arquivos Disponíveis</h5>
+            </div>
+            <div class="list-group list-group-flush">
+                @if (Model.NoteFiles.Any())
+                {
+                    @foreach (var file in Model.NoteFiles)
+                    {
+                        <a asp-page="./ViewNotes" 
+                           asp-route-fileName="@file.Name"
+                           class="list-group-item list-group-item-action @(Model.SelectedFileName == file.Name ? "active" : "")">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-1">@file.Name</h6>
+                                <small>@file.LastWriteTime.ToString("dd/MM/yyyy HH:mm")</small>
+                            </div>
+                            <small>@(file.Length / 1024.0).ToString("F1") KB</small>
+                        </a>
+                    }
+                }
+                else
+                {
+                    <div class="list-group-item">
+                        Nenhum arquivo encontrado.
+                    </div>
+                }
+            </div>
+            <div class="card-footer">
+                <a asp-page="./SaveNote" class="btn btn-primary btn-sm">Criar Nova Nota</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-8">
+        @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+        {
+            <div class="alert alert-danger">
+                @Model.ErrorMessage
+            </div>
+        }
+
+        @if (!string.IsNullOrEmpty(Model.SelectedFileName))
+        {
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5>@Model.SelectedFileName</h5>
+                    <a href="/files/@Model.SelectedFileName" class="btn btn-sm btn-info" download>Download</a>
+                </div>
+                <div class="card-body">
+                    <pre class="p-3 bg-light" style="max-height: 500px; overflow-y: auto;">@Model.FileContent</pre>
+                </div>
+            </div>
+        }
+        else if (Model.NoteFiles.Any())
+        {
+            <div class="alert alert-info">
+                Selecione um arquivo para visualizar seu conteúdo.
+            </div>
+        }
+    </div>
+</div>

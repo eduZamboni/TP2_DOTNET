@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 using System.IO;
 using System.Threading.Tasks;
 
-namespace TP2.Pages
+namespace TP2.Pages.NoteManager
 {
     public class SaveNoteModel : PageModel
     {
