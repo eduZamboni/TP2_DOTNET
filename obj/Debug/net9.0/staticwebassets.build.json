@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "CeFcKDOauuaN0sCN/Di0u0Xmak5fAIPClrdlHTvZr6s=",
+  "Hash": "yH8kaZz78Lb/uF37JFTKRPzENbKd3vy6bpDUBGRhe1M=",
   "Source": "TP2",
   "BasePath": "_content/TP2",
   "Mode": "Default",
@@ -878,6 +878,27 @@
       "OriginalItemSpec": "/Users/p/Desktop/TP2_C#/TP2/wwwroot/lib/jquery/dist/jquery.min.map"
     },
     {
+      "Identity": "/Users/p/Desktop/TP2_C#/TP2/obj/Debug/net9.0/compressed/nl1qyox5dw-bigpatz117.gz",
+      "SourceId": "TP2",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/p/Desktop/TP2_C#/TP2/obj/Debug/net9.0/compressed/",
+      "BasePath": "_content/TP2",
+      "RelativePath": "files/note-20250519-161249#[.{fingerprint=bigpatz117}]?.txt.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/Users/p/Desktop/TP2_C#/TP2/wwwroot/files/note-20250519-161249.txt",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "elun3hwiag",
+      "Integrity": "okFvfIzq8GkJWR8Ps7YDpq3MsXl+TVIYJ0oCVDIzN6s=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/p/Desktop/TP2_C#/TP2/wwwroot/files/note-20250519-161249.txt"
+    },
+    {
       "Identity": "/Users/p/Desktop/TP2_C#/TP2/obj/Debug/net9.0/compressed/nqyaf9jrjy-6852st3jzg.gz",
       "SourceId": "TP2",
       "SourceType": "Computed",
@@ -1443,6 +1464,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/Users/p/Desktop/TP2_C#/TP2/wwwroot/files/note-20250519-161249.txt",
+      "SourceId": "TP2",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/p/Desktop/TP2_C#/TP2/wwwroot/",
+      "BasePath": "_content/TP2",
+      "RelativePath": "files/note-20250519-161249#[.{fingerprint}]?.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "bigpatz117",
+      "Integrity": "023xwvz9/S0rJtIgQ4wJQd3LC0AQS0OxD712Z5omTkE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/files/note-20250519-161249.txt"
     },
     {
       "Identity": "/Users/p/Desktop/TP2_C#/TP2/wwwroot/js/site.js",
@@ -3320,6 +3362,304 @@
         {
           "Name": "integrity",
           "Value": "sha256-+/824NtfTA0L7Mr42Fo+86YJP4R5cigdi9S7Fx5VVl4="
+        }
+      ]
+    },
+    {
+      "Route": "files/note-20250519-161249.bigpatz117.txt",
+      "AssetFile": "/Users/p/Desktop/TP2_C#/TP2/obj/Debug/net9.0/compressed/nl1qyox5dw-bigpatz117.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.035714285714"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"okFvfIzq8GkJWR8Ps7YDpq3MsXl+TVIYJ0oCVDIzN6s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 19 May 2025 19:12:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"023xwvz9/S0rJtIgQ4wJQd3LC0AQS0OxD712Z5omTkE=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bigpatz117"
+        },
+        {
+          "Name": "label",
+          "Value": "files/note-20250519-161249.txt"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-023xwvz9/S0rJtIgQ4wJQd3LC0AQS0OxD712Z5omTkE="
+        }
+      ]
+    },
+    {
+      "Route": "files/note-20250519-161249.bigpatz117.txt",
+      "AssetFile": "/Users/p/Desktop/TP2_C#/TP2/wwwroot/files/note-20250519-161249.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"023xwvz9/S0rJtIgQ4wJQd3LC0AQS0OxD712Z5omTkE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 19 May 2025 19:12:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bigpatz117"
+        },
+        {
+          "Name": "label",
+          "Value": "files/note-20250519-161249.txt"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-023xwvz9/S0rJtIgQ4wJQd3LC0AQS0OxD712Z5omTkE="
+        }
+      ]
+    },
+    {
+      "Route": "files/note-20250519-161249.bigpatz117.txt.gz",
+      "AssetFile": "/Users/p/Desktop/TP2_C#/TP2/obj/Debug/net9.0/compressed/nl1qyox5dw-bigpatz117.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"okFvfIzq8GkJWR8Ps7YDpq3MsXl+TVIYJ0oCVDIzN6s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 19 May 2025 19:12:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bigpatz117"
+        },
+        {
+          "Name": "label",
+          "Value": "files/note-20250519-161249.txt.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-okFvfIzq8GkJWR8Ps7YDpq3MsXl+TVIYJ0oCVDIzN6s="
+        }
+      ]
+    },
+    {
+      "Route": "files/note-20250519-161249.txt",
+      "AssetFile": "/Users/p/Desktop/TP2_C#/TP2/obj/Debug/net9.0/compressed/nl1qyox5dw-bigpatz117.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.035714285714"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"okFvfIzq8GkJWR8Ps7YDpq3MsXl+TVIYJ0oCVDIzN6s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 19 May 2025 19:12:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"023xwvz9/S0rJtIgQ4wJQd3LC0AQS0OxD712Z5omTkE=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-023xwvz9/S0rJtIgQ4wJQd3LC0AQS0OxD712Z5omTkE="
+        }
+      ]
+    },
+    {
+      "Route": "files/note-20250519-161249.txt",
+      "AssetFile": "/Users/p/Desktop/TP2_C#/TP2/wwwroot/files/note-20250519-161249.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"023xwvz9/S0rJtIgQ4wJQd3LC0AQS0OxD712Z5omTkE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 19 May 2025 19:12:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-023xwvz9/S0rJtIgQ4wJQd3LC0AQS0OxD712Z5omTkE="
+        }
+      ]
+    },
+    {
+      "Route": "files/note-20250519-161249.txt.gz",
+      "AssetFile": "/Users/p/Desktop/TP2_C#/TP2/obj/Debug/net9.0/compressed/nl1qyox5dw-bigpatz117.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "27"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"okFvfIzq8GkJWR8Ps7YDpq3MsXl+TVIYJ0oCVDIzN6s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 19 May 2025 19:12:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-okFvfIzq8GkJWR8Ps7YDpq3MsXl+TVIYJ0oCVDIzN6s="
         }
       ]
     },

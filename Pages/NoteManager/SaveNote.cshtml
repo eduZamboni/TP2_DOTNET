@@ -1,0 +1,40 @@
+@page
+@model TP2.Pages.SaveNoteModel
+@{
+    ViewData["Title"] = "Salvar Nota";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@if (!Model.NoteIsSaved)
+{
+    <div class="row">
+        <div class="col-md-8">
+            <form method="post">
+                <div class="mb-3">
+                    <label asp-for="Input.Content" class="form-label"></label>
+                    <textarea asp-for="Input.Content" class="form-control" rows="10" placeholder="Digite aqui o conteúdo da sua nota..."></textarea>
+                    <span asp-validation-for="Input.Content" class="text-danger"></span>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Salvar Nota</button>
+            </form>
+        </div>
+    </div>
+}
+else
+{
+    <div class="alert alert-success">
+        <h4>Nota salva com sucesso!</h4>
+        <p>Seu arquivo foi salvo como: <strong>@Model.SavedFileName</strong></p>
+        <a href="/files/@Model.SavedFileName" class="btn btn-info" target="_blank" download>Download da Nota</a>
+    </div>
+    
+    <div class="mt-3">
+        <a asp-page="./SaveNote" class="btn btn-primary">Criar nova nota</a>
+    </div>
+}
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
