@@ -6,7 +6,7 @@
 
 <h1>@ViewData["Title"]</h1>
 
-<form method="post">
+<form method="post" id="cityForm">
     <div class="mb-3">
         <label asp-for="Input.CityName" class="form-label"></label>
         <input asp-for="Input.CityName" class="form-control" />
@@ -25,4 +25,11 @@
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
+    <script>
+        $(document).ready(function() {
+            $("#Input_CityName").on("input", function() {
+                $(this).valid();
+            });
+        });
+    </script>
 }
