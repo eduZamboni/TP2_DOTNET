@@ -1,31 +1,60 @@
 @page
 @model TP2.Pages.CountryManager.CreateCountryModel
 @{
-    ViewData["Title"] = "Cadastrar País";
+    ViewData["Title"] = "Cadastrar Países";
 }
 
 <h1>@ViewData["Title"]</h1>
 
 <form method="post" id="countryForm">
-    <div class="mb-3">
-        <label asp-for="Input.CountryName" class="form-label"></label>
-        <input asp-for="Input.CountryName" class="form-control" />
-        <span asp-validation-for="Input.CountryName" class="text-danger"></span>
-    </div>
-    
-    <div class="mb-3">
-        <label asp-for="Input.CountryCode" class="form-label"></label>
-        <input asp-for="Input.CountryCode" class="form-control" maxlength="2" placeholder="BR" />
-        <span asp-validation-for="Input.CountryCode" class="text-danger"></span>
-    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nome do País</th>
+                <th>Código (ISO)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < 5; i++)
+            {
+                <tr>
+                    <td>
+                        <div class="mb-2">
+                            <input asp-for="Inputs[i].CountryName" class="form-control" placeholder="Ex: Brasil" />
+                            <span asp-validation-for="Inputs[i].CountryName" class="text-danger"></span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="mb-2">
+                            <input asp-for="Inputs[i].CountryCode" class="form-control" maxlength="2" placeholder="BR" style="width: 80px;" />
+                            <span asp-validation-for="Inputs[i].CountryCode" class="text-danger"></span>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 
     <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
 
-@if (Model.Submitted && Model.CreatedCountry != null)
+@if (Model.Submitted && Model.CreatedCountries != null)
 {
     <div class="alert alert-success mt-3">
-        País cadastrado: <strong>@Model.CreatedCountry.CountryName (@Model.CreatedCountry.CountryCode)</strong>
+        <h4>Países cadastrados:</h4>
+        <ul>
+            @foreach (var country in Model.CreatedCountries)
+            {
+                <li><strong>@country.CountryName (@country.CountryCode)</strong></li>
+            }
+        </ul>
+    </div>
+}
+
+@if (Model.Submitted && !Model.CreatedCountries.Any())
+{
+    <div class="alert alert-warning mt-3">
+        Nenhum país foi cadastrado. Preencha pelo menos um par de campos.
     </div>
 }
 

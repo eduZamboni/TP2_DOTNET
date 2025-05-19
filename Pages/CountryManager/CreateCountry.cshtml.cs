@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic;
 
 namespace TP2.Pages.CountryManager
 {
@@ -14,13 +15,13 @@ namespace TP2.Pages.CountryManager
     public class CreateCountryModel : PageModel
     {
         [BindProperty]
-        public required InputModel Input { get; set; }
+        public List<InputModel> Inputs { get; set; } = new List<InputModel>();
         public bool Submitted { get; private set; }
-        public Country? CreatedCountry { get; private set; }
+        public List<Country> CreatedCountries { get; private set; } = new List<Country>();
 
         public void OnGet()
         {
-            Input = new InputModel();
+            Inputs = Enumerable.Range(0, 5).Select(_ => new InputModel()).ToList();
         }
 
         public IActionResult OnPost()
@@ -31,10 +32,19 @@ namespace TP2.Pages.CountryManager
             }
 
             // Criar instância de Country a partir do InputModel
-            CreatedCountry = new Country
+            CreatedCountries = new List<Country>();
+            foreach (
+                var input in Inputs.Where(
+                    i => !string.IsNullOrWhiteSpace(i.CountryName) && !string.IsNullOrWhiteSpace(i.CountryCode)
+                    )
+                )
+
             {
-                CountryName = Input.CountryName,
-                CountryCode = Input.CountryCode
+                CreatedCountries.Add(new Country
+                {
+                    CountryName = input.CountryName,
+                    CountryCode = input.CountryCode
+                });
             };
             
             Submitted = true;
