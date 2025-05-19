@@ -15,14 +15,14 @@
     
     <div class="mb-3">
         <label asp-for="Input.CountryCode" class="form-label"></label>
-        <input asp-for="Input.CountryCode" class="form-control"/>
+        <input asp-for="Input.CountryCode" class="form-control" maxlength="2" placeholder="BR" />
         <span asp-validation-for="Input.CountryCode" class="text-danger"></span>
     </div>
 
     <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
 
-@if (Model.Submitted)
+@if (Model.Submitted && Model.CreatedCountry != null)
 {
     <div class="alert alert-success mt-3">
         País cadastrado: <strong>@Model.CreatedCountry.CountryName (@Model.CreatedCountry.CountryCode)</strong>

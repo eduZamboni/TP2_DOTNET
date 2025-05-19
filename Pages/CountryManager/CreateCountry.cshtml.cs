@@ -14,9 +14,9 @@ namespace TP2.Pages.CountryManager
     public class CreateCountryModel : PageModel
     {
         [BindProperty]
-        public InputModel Input { get; set; }
+        public required InputModel Input { get; set; }
         public bool Submitted { get; private set; }
-        public Country CreatedCountry { get; private set; }
+        public Country? CreatedCountry { get; private set; }
 
         public void OnGet()
         {
@@ -49,7 +49,8 @@ namespace TP2.Pages.CountryManager
             public string CountryName { get; set; } = string.Empty;
             
             [Required(ErrorMessage = "O código do país é obrigatório.")]
-            [Display(Name = "Código do País")]
+            [StringLength(2, MinimumLength = 2, ErrorMessage = "O código do país deve ter exatamente 2 caracteres.")]
+            [Display(Name = "Código do País (ISO)")]
             public string CountryCode { get; set; } = string.Empty;
         }
     }
