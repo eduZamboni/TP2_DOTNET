@@ -7,7 +7,7 @@ namespace TP2.Pages.CityManager
     public class CreateCityModel : PageModel
     {
         [BindProperty]
-        public InputModel Input { get; set; }
+        public required InputModel Input { get; set; }
         public bool Submitted { get; private set; }
 
         public void OnGet()

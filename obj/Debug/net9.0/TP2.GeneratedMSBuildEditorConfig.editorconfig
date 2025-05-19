@@ -24,6 +24,10 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2l0eU1hbmFnZXIvQ2l0eURldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/p/Desktop/TP2_C\#/TP2/Pages/CityManager/CityList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2l0eU1hbmFnZXIvQ2l0eUxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/p/Desktop/TP2_C\#/TP2/Pages/CityManager/CreateCity.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2l0eU1hbmFnZXIvQ3JlYXRlQ2l0eS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
